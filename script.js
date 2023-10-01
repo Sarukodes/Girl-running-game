@@ -9,31 +9,31 @@ setTimeout(() => {
 document.onkeydown = function (e) {
     console.log("Key code is: ", e.keyCode)
     if (e.keyCode == 38) {
-        lion = document.querySelector('.lion');
-        lion.classList.add('animatelion');
+        dino = document.querySelector('.dino');
+        dino.classList.add('animateDino');
         setTimeout(() => {
-            lion.classList.remove('animatelion')
+            dino.classList.remove('animateDino')
         }, 700);
     }
     if (e.keyCode == 39) {
-        lion = document.querySelector('.lion');
-        lionX = parseInt(window.getComputedStyle(lion, null).getPropertyValue('left'));
-        lion.style.left = lionX + 112 + "px";
+        dino = document.querySelector('.dino');
+        dinoX = parseInt(window.getComputedStyle(dino, null).getPropertyValue('left'));
+        dino.style.left = dinoX + 112 + "px";
     }
     if (e.keyCode == 37) {
-        lion = document.querySelector('.lion');
-        lionX = parseInt(window.getComputedStyle(lion, null).getPropertyValue('left'));
-        lion.style.left = (lionX - 112) + "px";
+        dino = document.querySelector('.dino');
+        dinoX = parseInt(window.getComputedStyle(dino, null).getPropertyValue('left'));
+        dino.style.left = (dinoX - 112) + "px";
     }
 }
 
 setInterval(() => {
-    lion = document.querySelector('.lion');
+    dino = document.querySelector('.dino');
     gameOver = document.querySelector('.gameOver');
     obstacle = document.querySelector('.obstacle');
 
-    dx = parseInt(window.getComputedStyle(lion, null).getPropertyValue('left'));
-    dy = parseInt(window.getComputedStyle(lion, null).getPropertyValue('top'));
+    dx = parseInt(window.getComputedStyle(dino, null).getPropertyValue('left'));
+    dy = parseInt(window.getComputedStyle(dino, null).getPropertyValue('top'));
 
     ox = parseInt(window.getComputedStyle(obstacle, null).getPropertyValue('left'));
     oy = parseInt(window.getComputedStyle(obstacle, null).getPropertyValue('top'));
